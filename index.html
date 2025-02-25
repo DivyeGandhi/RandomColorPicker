@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            background: url('https://source.unsplash.com/random/1920x1080') no-repeat center center fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            background-color: black;
+            transition: background-color 0.5s ease-out;
+        }
+
+        .container {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        h1 {
+            color: white;
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .Display {
+            cursor: pointer;
+            background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+            backdrop-filter: blur(10px); /* Blurred background */
+            border-radius: 10px;
+            width: 15rem;
+            height: 4rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: aliceblue;
+            font-size: 1.5rem;
+            padding: 10px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .BTns {
+            display: flex;
+            gap: 10px;
+        }
+
+        button {
+            padding: 12px 20px;
+            color: aliceblue;
+            font-size: large;
+            border-radius: 8px;
+            border: none;
+            background-color: rgba(0, 123, 255, 0.6);
+            cursor: pointer;
+            transition: background-color 100s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        button:hover {
+            background-color: rgba(0, 123, 255, 1);
+        }
+
+        #end {
+            background-color: rgba(169, 169, 169, 0.6);
+        }
+
+        #end:hover {
+            background-color: rgba(169, 169, 169, 1);
+        }
+
+        .toast {
+            display: none;
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 123, 255, 0.8);
+            color: white;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            opacity: 0;
+            transition: opacity 0.1s ease;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>RANDOM COLOR PICKER</h1>
+        <div class="Display">
+            Start to Generate
+        </div>
+        <div class="BTns">
+            <button id="start">Start</button>
+            <button id="end">End</button>
+        </div>
+        <div id="toast" class="toast">Text copied to clipboard!</div>
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>
